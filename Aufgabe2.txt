@@ -1,0 +1,87 @@
+Protokoll Aufgabe 2 "Debugging"
+
+1.   Macht euch klar, dass die Datenstruktur Person rekursiv ist, 
+     denn jedes Objekt vom Typ Person referenziert zwei weitere Objekte vom Typ Person, 
+     nämlich Mom und Dad.
+  
+A1.  Die Klasse "Person" beihaltet verschiedene Parameter wie FirstName, LastName und DateOfBirth,
+     aber auch weitere Objekte vom Typ "Person", nämlich Mom und Dad.
+     Die Funktion "public static Person Find (Person person)" ist rekursiv, 
+     da sie sich nach dem Durchlauf selbstständig wieder aufruft, bis die Funktion den Wert "null" zurückgibt	
+
+
+2.   Die Methdode BuildTree() baut einen Beispiel-Baum auf. Setzt einen Breakpoint in Zeile 19 von Program.cs, 
+     startet den Debugger und seht Euch den Inhalt von root im Debugger an.
+
+A2.  Die Funktion "BuildTree()" erzeugt einen Familienstammbaum, der bei der jüngsten Person (Willi Cambridge). 
+     Geht man weiter durch das root Verzeichnis, wird nach und nach der ganze Stammbaum angezeigt.
+    
+     Eltern von Willi Cambridge: Diana Spancer & Charlie Wales
+     
+
+     Eltern von Diana Spancer: Fanzi Roche & Edie Spencer
+
+     Eltern von Franzi Roche: Ruth Gill & Moritz Roche
+
+     Eltern von Edie Spencer: Cynthia Hamilton & Albert Spencer
+
+
+     Eltern von Charlie Wales: Else Windsor & Philipp Battenberg
+
+     Eltern von Else Windsor: Lisbeth Bowes-Lyon & Schorsch-Albert York
+
+     Eltern von Philipp Battenberg: Alice Battenberg & Andi ElGreco
+
+
+3.   Die Methode Find() durchläuft rekursiv den Baum und prüft alle Person-Objekte darauf, 
+     ob die Bedingung in Zeile 22 gegeben ist.
+     Die erste Person, die die Bedingung erfüllt, wird zurückgeliefert.
+     Ändert die Bedingung so, dass nicht gleich die erste Person ("Willi") zurückgegeben wird.
+     Eventuell gibt es Abstürze. Analysiert die Abstürze mit dem Debugger, überprüft Variableninhalte und den Call-Stack.
+
+A3.  Vorher: "if (person.LastName != "Battenberg")"
+
+     Nachher: "if (person.LastName != "Cambridge" && person.LastName !=  "Spencer")"
+     Schreibt man die if-Bedingung so um, ist die erste Person die zurück gegeben wird "Franzi Roche".
+     
+
+     Wenn man die Bedinung erneut verändert auf:
+     "if (person.LastName == "Battenberg")"
+     Entsteht eine "System.NullReferenceException", da nur die Mütterliche Seite des Stammbaums von Willy untersucht wird 
+     und in dieser Seite keine Person namens Battenberg vorhanden ist
+
+     Wenn man nun in den Code diese if Abfrage hinzufügt, wird verhindert das es zu einer 'System.NullReferenceException' kommt:
+     
+     if(person.Mom != null)
+	ret = Find(person.Mom);
+
+     if(person.Dad != null)
+	ret = Find(person.Dad);
+
+     Return ret;
+
+
+
+4.   Schreibt komplexere Bedingungen, findet z.B. die erste Person, die in einer Altersspanne liegt, vergleicht dazu, person.DateOfBirth.Year mit DateTime.Now.Year. 
+     Analysiert mit dem Debugger, ob Eure Bedingung richtig ist.
+
+A4.  Wenn man nun DateTime.Now.Year - person.DateOfBirth.Year, 
+     in den Code hinzufügt kann man nun über eine neue If Abfrage if(50 < age && age < 100) 
+     nach einer bestimmten Alterspanne den Stammbaum durchforschen und wenn ein Entsprechender Wert gefunden wurde, wird dieser zurück geliefert.
+     Nachteil hierbei ist, dass immer noch zuerst die Mütter überprüft werden.
+     Sollte also ein Vater und eine Mutter das gleiche Alter haben,
+     wird immer die Mutter ausgegeben.
+
+
+     int age = DateTime.Now.Year - person.DateOfBirth.Year;
+      if(50 < age && age < 100)
+         return person;
+               
+          if(person.Mom != null)
+              ret = Find(person.Mom);
+          if (ret != null)
+              return ret;
+          if(person.Mom != null)
+              ret = Find(person.Dad);
+          return ret;
+     
