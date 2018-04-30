@@ -12,10 +12,13 @@ namespace Aufgabe1._2
         static string w1;
         static string w2;
         static string w3;
+
+
         static void Main(string[] args)
         {
-            
             string[] verse = new string[l];
+
+            
             for (int i = 0; i < l; i++)
             {
                 GetVerse();

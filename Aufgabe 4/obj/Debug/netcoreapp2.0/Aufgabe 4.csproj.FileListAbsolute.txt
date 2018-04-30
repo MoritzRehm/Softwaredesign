@@ -1,0 +1,3 @@
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Aufgabe 4\obj\Debug\netcoreapp2.0\Aufgabe 4.csproj.CoreCompileInputs.cache
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Aufgabe 4\obj\Debug\netcoreapp2.0\Aufgabe 4.AssemblyInfoInputs.cache
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Aufgabe 4\obj\Debug\netcoreapp2.0\Aufgabe 4.AssemblyInfo.cs
