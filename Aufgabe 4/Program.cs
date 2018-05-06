@@ -38,6 +38,12 @@ namespace Aufgabe 4
         }
     }
 
+    public class FindNode <T> 
+    {
+        
+
+    }
+
     class Program
     {
         static void Main(string[] args)
