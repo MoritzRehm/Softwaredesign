@@ -1,0 +1,10 @@
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\L01 Source Control\obj\Debug\netcoreapp2.0\L01 Source Control.csproj.CoreCompileInputs.cache
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\L01 Source Control\obj\Debug\netcoreapp2.0\L01 Source Control.AssemblyInfoInputs.cache
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\L01 Source Control\obj\Debug\netcoreapp2.0\L01 Source Control.AssemblyInfo.cs
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\L01 Source Control\bin\Debug\netcoreapp2.0\L01 Source Control.deps.json
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\L01 Source Control\bin\Debug\netcoreapp2.0\L01 Source Control.runtimeconfig.json
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\L01 Source Control\bin\Debug\netcoreapp2.0\L01 Source Control.runtimeconfig.dev.json
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\L01 Source Control\bin\Debug\netcoreapp2.0\L01 Source Control.dll
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\L01 Source Control\bin\Debug\netcoreapp2.0\L01 Source Control.pdb
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\L01 Source Control\obj\Debug\netcoreapp2.0\L01 Source Control.dll
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\L01 Source Control\obj\Debug\netcoreapp2.0\L01 Source Control.pdb

@@ -1,0 +1,10 @@
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Singleton Übung\obj\Debug\netcoreapp2.0\Singleton Übung.csproj.CoreCompileInputs.cache
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Singleton Übung\obj\Debug\netcoreapp2.0\Singleton Übung.AssemblyInfoInputs.cache
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Singleton Übung\obj\Debug\netcoreapp2.0\Singleton Übung.AssemblyInfo.cs
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Singleton Übung\bin\Debug\netcoreapp2.0\Singleton Übung.deps.json
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Singleton Übung\bin\Debug\netcoreapp2.0\Singleton Übung.runtimeconfig.json
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Singleton Übung\bin\Debug\netcoreapp2.0\Singleton Übung.runtimeconfig.dev.json
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Singleton Übung\bin\Debug\netcoreapp2.0\Singleton Übung.dll
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Singleton Übung\bin\Debug\netcoreapp2.0\Singleton Übung.pdb
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Singleton Übung\obj\Debug\netcoreapp2.0\Singleton Übung.dll
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Singleton Übung\obj\Debug\netcoreapp2.0\Singleton Übung.pdb
