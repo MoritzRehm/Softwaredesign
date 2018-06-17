@@ -1,0 +1,11 @@
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\EmailChecker\bin\Debug\netcoreapp2.0\EmailChecker.deps.json
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\EmailChecker\bin\Debug\netcoreapp2.0\EmailChecker.runtimeconfig.json
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\EmailChecker\bin\Debug\netcoreapp2.0\EmailChecker.runtimeconfig.dev.json
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\EmailChecker\bin\Debug\netcoreapp2.0\EmailChecker.dll
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\EmailChecker\bin\Debug\netcoreapp2.0\EmailChecker.pdb
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\EmailChecker\obj\Debug\netcoreapp2.0\EmailChecker.csprojResolveAssemblyReference.cache
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\EmailChecker\obj\Debug\netcoreapp2.0\EmailChecker.csproj.CoreCompileInputs.cache
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\EmailChecker\obj\Debug\netcoreapp2.0\EmailChecker.AssemblyInfoInputs.cache
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\EmailChecker\obj\Debug\netcoreapp2.0\EmailChecker.AssemblyInfo.cs
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\EmailChecker\obj\Debug\netcoreapp2.0\EmailChecker.dll
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\EmailChecker\obj\Debug\netcoreapp2.0\EmailChecker.pdb
