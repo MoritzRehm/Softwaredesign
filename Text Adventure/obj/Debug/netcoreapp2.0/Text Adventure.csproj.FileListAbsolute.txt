@@ -1,0 +1,11 @@
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Text Adventure\bin\Debug\netcoreapp2.0\Text Adventure.deps.json
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Text Adventure\bin\Debug\netcoreapp2.0\Text Adventure.runtimeconfig.json
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Text Adventure\bin\Debug\netcoreapp2.0\Text Adventure.runtimeconfig.dev.json
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Text Adventure\bin\Debug\netcoreapp2.0\Text Adventure.dll
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Text Adventure\bin\Debug\netcoreapp2.0\Text Adventure.pdb
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Text Adventure\obj\Debug\netcoreapp2.0\Text Adventure.csprojResolveAssemblyReference.cache
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Text Adventure\obj\Debug\netcoreapp2.0\Text Adventure.csproj.CoreCompileInputs.cache
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Text Adventure\obj\Debug\netcoreapp2.0\Text Adventure.AssemblyInfoInputs.cache
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Text Adventure\obj\Debug\netcoreapp2.0\Text Adventure.AssemblyInfo.cs
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Text Adventure\obj\Debug\netcoreapp2.0\Text Adventure.dll
+C:\Users\Moritz\Documents\GitHub\Softwaredesign\Text Adventure\obj\Debug\netcoreapp2.0\Text Adventure.pdb
