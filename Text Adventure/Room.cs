@@ -4,8 +4,7 @@ using System.Collections.Generic;
 
 namespace TextAdventure
 {
-    // Liste oder Array für inventory etc.
-    // Durchspielen der möglichen Kämpfe und anpassen der Lebenspunkte 
+    
     class Room : Gameobject
     {
         public Room Northexit;
@@ -14,9 +13,10 @@ namespace TextAdventure
         public Room Westexit;
         public bool Available;
         
-        //public List<Character> CharacterInventory = new List<Character>();
         public List<Item> RoomInventory = new List<Item>();
         public List<Character> CharacterList = new List<Character>();
+
+
         public static void addExitNorth (Room r, Room north)
         {
             r.Northexit = north;
@@ -46,7 +46,7 @@ namespace TextAdventure
                 Console.WriteLine(character.Name);
                 if (character.IsAgressive == true)
                 {
-                    Console.WriteLine("Watch out! " + character.Name + " is agressive. You will get attacked.");
+                    Console.WriteLine("Be careful! " + character.Name + " is stronger than you. You may need a weapon to defeat him!");
                 }
             }
             

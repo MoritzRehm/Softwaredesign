@@ -18,13 +18,12 @@ namespace TextAdventure
             return describtion.Describtion;
         }
     }
-    // Liste oder Array für inventory etc.
-    // Durchspielen der möglichen Kämpfe und anpassen der Lebenspunkte 
+
     class Game 
     {
         private List<Item> Inventory;
-        public string Startuptext = "Hello Stranger. Welcome to the dangerous Clublife.";
-        public string Endtext = "Congratulation. You reached the end of the this Textadventure";
+        public string Startuptext = "Hello Stranger. Welcome to the dangerous Clublife. Your mission is to become the most Badass person in this club, Let´s Go!";
+        public string Endtext = "Congratulation. You found the key to become the most Badass dude in the club! \n Now nobody wants beef with you anymore, you can enjoy the rest of the night :)";
         public bool isRunning = true;
         private bool _gameOver = false;
         public Room CurrentLocation = new Room
@@ -75,7 +74,7 @@ namespace TextAdventure
             Name = "BeerBottle",
             Describtion = "This Bottle can be usefull in a fight",
             Attackdamage = 20,
-            Carryable=false,
+            Carryable=true,
             Value = 1,
         };
         Item Cellphone = new Item 
@@ -106,7 +105,7 @@ namespace TextAdventure
         {
             Name ="shiny Rolex",
             Describtion="With this thing you are the spotlight in here",
-            Carryable =false,
+            Carryable = true,
             Value = 1,
         };
         Item CarKeys = new Item
@@ -121,7 +120,7 @@ namespace TextAdventure
         {
             Isalive = true,
             HealthPoints = 100,
-            AttackDamage = 10,
+            AttackDamage = 20,
             Characterinventory = new List<Item>(),
         
         };
@@ -141,7 +140,7 @@ namespace TextAdventure
             Name = "The Cleaning Lady",
             Describtion ="She may seem a little slow but she has mob which can really hurt",
             HealthPoints = 30,
-            AttackDamage = 15,
+            AttackDamage = 20,
             Characterinventory = new List<Item>(),
             Dialouge = {"Just let me do my work please", "It´s surprising what some people loose on the Toilet..."},
         };
@@ -214,6 +213,8 @@ namespace TextAdventure
             Bar.RoomInventory.Add(BeerBottle);
 
             CleaningLady.Characterinventory.Add(Rolex);
+            Barkeeper.Characterinventory.Add(BeerBottle);
+
             Console.WriteLine(Startuptext);
            
             Console.WriteLine("Type 'l' or 'look' to get a describtion of your location and its exits.");
@@ -223,11 +224,6 @@ namespace TextAdventure
             Console.WriteLine("You are in the " + Player.Location.Name);
         }
 
-        public Game()
-        {
-            
-            
-        }
         
         public void doAction(string input)
         {   
@@ -246,8 +242,6 @@ namespace TextAdventure
                         Character.getCharacterLocation(Player);
                         Room.getCharacterlist(Player.Location);
                         Room.getRoominventory(Player.Location);
-
-                        
                     } 
                     else 
                     {
@@ -301,7 +295,7 @@ namespace TextAdventure
                 if (input == "help" || input == "h")
                 {
                     Console.WriteLine("'l' or 'look':       Shows you the room and its exits");
-                    //Console.WriteLine("'Look at X':         Gives you information about a specific item in your \n                     inventory, where X is the items name.");
+                    Console.WriteLine("'lookat X':         Gives you information about a specific Character");
                     Console.WriteLine("'t' or 'take' <item>:    Attempts to pick up an item.");
                     Console.WriteLine("'d' or 'drop':       Attemps to drop an item.");
                     Console.WriteLine("'use '<item>:             Attempts to use an item.");
@@ -355,6 +349,7 @@ namespace TextAdventure
                 if (input == "l" || input == "look")
                 {
                     Console.WriteLine(Player.Location.Describtion);
+                    Console.WriteLine("You see:");
                     Room.getCharacterlist(Player.Location);
                     Room.getRoominventory(Player.Location);
                     Room.getExitDescribtion(Player);
@@ -372,10 +367,16 @@ namespace TextAdventure
                     Character.attack(Player, choosedcharacter);
                 }
 
-                if (input.StartsWith("talkto"))
+                if (input.StartsWith("talkto "))
                 {
                     string choosedcharacter = input.Substring(7, input.Length - 7);
                     Character.talkto(Player, choosedcharacter);
+                }
+
+                if (input.StartsWith("lookat "))
+                {
+                    string choosedcharacter = input.Substring(7, input.Length - 7);
+                    Character.lookat(Player, choosedcharacter); 
                 }
                 
             }
@@ -388,6 +389,19 @@ namespace TextAdventure
         
         public void Update()
         {
+
+            if (Player.Isalive == false)
+            {
+                Console.WriteLine("You died. Game Over!");
+                isRunning = false;
+            }
+
+            if (Player.EquippedItem == Rolex)
+            {
+                Console.WriteLine(Endtext);
+                isRunning = false;
+            }
+
             Console.Write("\n  -> Command: ");
             string input = Console.ReadLine().ToLower();
 

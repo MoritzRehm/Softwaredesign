@@ -26,14 +26,8 @@ namespace TextAdventure
         {
             Console.WriteLine("You are in the " + c.Location.Name + ". You see ");
         }
-        public static void moveCharacter (Character c)
-        {
-            
-        }
-        public static void talkto(Character c, Character npc)
-        {
+     
 
-        }
 
         public static void attack(Character c, string choosedcharacter)
         {
@@ -73,6 +67,7 @@ namespace TextAdventure
             if (c.HealthPoints <= 0)
             {
                 c.Isalive = false;
+                
             }
         }
 
@@ -101,7 +96,7 @@ namespace TextAdventure
             }
             c.EquippedItem = c.Characterinventory[i] ;
             Console.WriteLine(c.Characterinventory[i].Name + " has been equipped.");
-            c.AttackDamage = 10 + c.EquippedItem.Attackdamage;
+            c.AttackDamage = 20 + c.EquippedItem.Attackdamage;
             Console.WriteLine("Your attackdamage is " + c.AttackDamage + " now.");
             c.Characterinventory.Remove(c.Characterinventory[i]);
             
@@ -114,6 +109,7 @@ namespace TextAdventure
                 if (chooseditem == r.RoomInventory[i].Name.ToLower())
                 {
                     Console.WriteLine(r.RoomInventory[i].Name + " has been added to your inventory.");
+                    Console.WriteLine(r.RoomInventory[i].Describtion);
                     c.Characterinventory.Add(r.RoomInventory[i]);
                     r.RoomInventory.Remove(r.RoomInventory[i]);    
                 }
@@ -150,6 +146,18 @@ namespace TextAdventure
             }
             Console.WriteLine("The choosed character '" + choosedcharacter + "' doesn't exist in this room.");
             
+        }
+
+        public static void lookat(Character c, string choosedcharacter)
+        {
+            for (int i = c.Location.CharacterList.Count -1; i >= 0; i--)
+            {
+                if (choosedcharacter == c.Location.CharacterList[i].Name.ToLower())
+                {
+                    Console.WriteLine(getdescribtion(c.Location.CharacterList[i]));
+                    
+                }     
+            }
         }
 
         public static void getCharacterinventory(Character c)
